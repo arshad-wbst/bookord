@@ -1,0 +1,6 @@
+module Pods_Bookord {
+  umbrella header "Pods-Bookord-umbrella.h"
+
+  export *
+  module * { export * }
+}
