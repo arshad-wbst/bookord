@@ -1,0 +1,3 @@
+/Users/wbst/Documents/naushad/bookord/android/app/.cxx/RelWithDebInfo/6zfza716/x86_64/CMakeFiles/appmodules.dir
+/Users/wbst/Documents/naushad/bookord/android/app/.cxx/RelWithDebInfo/6zfza716/x86_64/CMakeFiles/edit_cache.dir
+/Users/wbst/Documents/naushad/bookord/android/app/.cxx/RelWithDebInfo/6zfza716/x86_64/CMakeFiles/rebuild_cache.dir
