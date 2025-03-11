@@ -78,8 +78,8 @@ const Locationpage =({ navigation })=> {
                         </View>
                         <PrimaryButton
                             title="Allow location access"
-                            // onPress={()=>navigation.navigate('MapScreen') }
-                            onPress={getLocation}
+                            onPress={()=>navigation.navigate('MapScreen') }
+                            // onPress={getLocation}
                             // loading={loading}
                             textColor="white"
                             customStyle={{

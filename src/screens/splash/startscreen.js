@@ -4,8 +4,8 @@ import PrimaryButton from '../../componets/PrimaryButton';
 import OutlineButton from '../../componets/OutlineButton';
 import { userLogin } from '../../services/ServerRequest';
 import styles from './style';
-
 const  Startscreen =({ navigation }) => {
+
   // useEffect(() => {
   //   handleLogin(); 
   // }, []); 
@@ -25,13 +25,15 @@ const  Startscreen =({ navigation }) => {
         resizeMode="cover"
       >
         <View style={styles.contentContainer}>
-          <Text style={styles.title}>Bookord</Text>
+          <Text style={styles.title}>Bookord</Text> 
           <Text style={styles.subtitle}>
             Finding and connecting with trusted local{'\n'}professionals around you.
           </Text>
 
           <View style={styles.buttonContainer}>
-            <PrimaryButton title="Sign up to Bookord" onPress={() => navigation.navigate('SignUp')} />
+            <PrimaryButton title="Sign up to Bookord" 
+            onPress={() => navigation.navigate('SignUp')}
+             />
             <OutlineButton title="Login" onPress={() => navigation.navigate('Login')} />
           </View>
         </View>
