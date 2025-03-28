@@ -4,17 +4,19 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { Colors } from "../../styles";
 
 const services = [
-  { id: "1", title: "Cleaning the house", image: require("../../assets/images/cleaning.png")},
-  { id: "2", title: "Painting the house", image: require("../../assets/images/cleaning.png") },
+  { id: "1", title: "Cleaning the house", image: require("../../assets/images/cleaner.png")},
+  { id: "2", title: "Painting the house", image: require("../../assets/images/images.jpeg") },
 ];
 
-const ServiceList = () => {
+const ServiceList = ({onPress}) => {
   return (
     <View style={styles.container}>
       {/* Header Row */}
       <View style={styles.header}>
         <Text style={styles.title}>Popular Services on Bookord</Text>
-        <TouchableOpacity style={{flexDirection:"row",alignItems:"center"}}>
+        <TouchableOpacity
+          onPress={onPress} 
+         style={{flexDirection:"row",alignItems:"center"}}>
           <Text style={styles.viewAll}>View all</Text>
            <Icon name="chevron-right" size={20} color={Colors.BLACK} />
         </TouchableOpacity>

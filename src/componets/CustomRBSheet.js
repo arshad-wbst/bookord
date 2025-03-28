@@ -1,5 +1,5 @@
 import React, { useState, forwardRef, useRef, useImperativeHandle } from "react";
-import { View, Text } from "react-native";
+import { View, Text,ScrollView} from "react-native";
 import RBSheet from "react-native-raw-bottom-sheet";
 import { Obj } from "../styles/constants";
 
@@ -56,7 +56,7 @@ const CustomRBSheet = forwardRef(({ title, children ,content}, ref) => {
             {title}
           </Text>
         )}
-        {children}
+                {children}
       </View>
     </RBSheet>
   );

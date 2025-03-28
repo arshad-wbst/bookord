@@ -3,7 +3,6 @@ import { View, Text, TouchableOpacity, ScrollView, TextInput, Image } from 'reac
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useNavigation } from '@react-navigation/native';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
-import RBSheet from 'react-native-raw-bottom-sheet';
 import styles from './styles';
 import PrimaryButton from '../../componets/PrimaryButton';
 import { Colors } from '../../styles';
