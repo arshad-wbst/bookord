@@ -91,7 +91,7 @@ const AppNavigator = () => {
                   <Stack.Screen name="AdditionalAddressScreen" component={AdditionalAddressScreen} /> */}
 
                   {/* Dashboard */}
-                  {/* <Stack.Screen name="Dashboard" component={BottomTabNavigator} />
+                  <Stack.Screen name="Dashboard" component={BottomTabNavigator} />
                   <Stack.Screen name="ViewAll" component={ViewAll} />
                   <Stack.Screen name="CategoryById" component={CategoryById}/>
                   <Stack.Screen name="SearchScreen" component={SearchScreen} />
@@ -102,7 +102,7 @@ const AppNavigator = () => {
                   <Stack.Screen name="SavedAddresses" component={SavedAddresses} />
                   <Stack.Screen name="SavedBookOrd" component={SavedBookOrd} />
                   <Stack.Screen name="NotificationSettings" component={NotificationSettings} />
-                  <Stack.Screen name="DescriptionScreen" component={DescriptionScreen}/> */}
+                  <Stack.Screen name="DescriptionScreen" component={DescriptionScreen}/>
                   <Stack.Screen name="CompleteScreen" component={CompleteScreen}/>
                 </Stack.Navigator>
               </NavigationContainer>

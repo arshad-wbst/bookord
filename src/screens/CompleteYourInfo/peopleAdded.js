@@ -50,7 +50,7 @@ const PeopleAdded = ({ route }) => {
     const [anything, setanything] = useState('');
     const [addedItems, setAddedItems] = useState({});
 
-    const progress = route.params?.progress || 0.5;
+    const progress = route.params?.progress || 0.4;
     const hoursData = [
         { label: "1 Hour", value: "1" },
         { label: "2 Hours", value: "2" },
@@ -95,12 +95,12 @@ const PeopleAdded = ({ route }) => {
         setLoading(true);
         setTimeout(() => {
             setLoading(false);
-            // navigation.navigate("NextScreen", { progress: 1.0 });
+            navigation.navigate("JobDateTime", { progress: 0.6 });
         }, 1000);
     };
 
     return (
-  
+
         <View style={styles.container}>
             <View style={styles.header}>
                 <TouchableOpacity onPress={() => navigation.goBack()}>
@@ -109,60 +109,60 @@ const PeopleAdded = ({ route }) => {
                 <Text style={styles.headerTitle}>Popular Add-Ons</Text>
                 <View style={{ width: 24 }} />
             </View>
-            <KeyboardAvoidingView 
-        behavior={Platform.OS === "ios" ? "padding" : "height"} 
-        style={{ flex: 1 }}
-    >
-               <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-                <View style={styles.formContainer}>
-                    {/* Service Provider Card */}
-                    <View style={styles.serviceCard}>
-                        <Image
-                            source={require("../../assets/images/cleaning.png")}
-                            style={styles.serviceImage}
-                        />
-                        <View style={styles.serviceInfo}>
-                            <Text style={styles.serviceName}>Palmcedar Cleaning <Icon name="check-decagram" size={14} color={Colors.PRIMARY} /></Text>
-                            <View style={styles.ratingRow}>
-                                <Icon name="star" size={16} color="black" />
-                                <Text style={styles.ratingText}>4.7</Text>
-                                <Text style={styles.reviewCount}>(115)</Text>
+            <KeyboardAvoidingView
+                behavior={Platform.OS === "ios" ? "padding" : "height"}
+                style={{ flex: 1 }}
+            >
+                <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+                    <View style={styles.formContainer}>
+                        {/* Service Provider Card */}
+                        <View style={styles.serviceCard}>
+                            <Image
+                                source={require("../../assets/images/cleaning.png")}
+                                style={styles.serviceImage}
+                            />
+                            <View style={styles.serviceInfo}>
+                                <Text style={styles.serviceName}>Palmcedar Cleaning <Icon name="check-decagram" size={14} color={Colors.PRIMARY} /></Text>
+                                <View style={styles.ratingRow}>
+                                    <Icon name="star" size={16} color="black" />
+                                    <Text style={styles.ratingText}>4.7</Text>
+                                    <Text style={styles.reviewCount}>(115)</Text>
+                                </View>
                             </View>
+                            <TouchableOpacity
+                                onPress={() => navigation.navigate('DescriptionScreen')}
+                                style={{ flexDirection: "row", alignItems: 'center' }}>
+                                <Text style={styles.viewProfile}>View Profile</Text>
+                                <Icon name={"chevron-right"} size={24} color="#313131" />
+                            </TouchableOpacity>
                         </View>
-                        <TouchableOpacity
-                            onPress={() => navigation.navigate('DescriptionScreen')}
-                            style={{ flexDirection: "row", alignItems: 'center' }}>
-                            <Text style={styles.viewProfile}>View Profile</Text>
-                            <Icon name={"chevron-right"} size={24} color="#313131" />
-                        </TouchableOpacity>
-                    </View>
 
-                    <Text style={styles.label}>People also added</Text>
-                    <View>
-                        <FlatList
-                            data={services}
-                            renderItem={({ item }) => <PeopleAlsoAdd item={item} onPress={() => openSheet("Hours", item)} addedItems={addedItems} handleAddPress={handleAddPress} />}
-                            keyExtractor={(item) => item.id}
-                            horizontal
-                            showsHorizontalScrollIndicator={false}
-                        />
-                    </View>
-
-                    <View style={{ paddingVertical: 10, marginTop: 20 }}>
-                        <Text style={styles.label}>Anything else we should know?</Text>
-                        <View style={styles.inputContainer}>
-                        <CustomTextInput
-                                value={anything}
-                                onChangeText={setanything}
-                                placeholder="Example: Ironing, window cleaning, etc"
-                                keyboardType="default"
-                                multiline={true} // Enable multiline
-                                onFocus={() => console.log('Input Focused')}
-                                style={{ minHeight: 80, textAlignVertical: 'top' }} // Adjust height
+                        <Text style={styles.label}>People also added</Text>
+                        <View>
+                            <FlatList
+                                data={services}
+                                renderItem={({ item }) => <PeopleAlsoAdd item={item} onPress={() => openSheet("Hours", item)} addedItems={addedItems} handleAddPress={handleAddPress} />}
+                                keyExtractor={(item) => item.id}
+                                horizontal
+                                showsHorizontalScrollIndicator={false}
                             />
                         </View>
+
+                        <View style={{ paddingVertical: 10, marginTop: 20 }}>
+                            <Text style={styles.label}>Anything else we should know?</Text>
+                            <View style={styles.inputContainer}>
+                                <CustomTextInput
+                                    value={anything}
+                                    onChangeText={setanything}
+                                    placeholder="Example: Ironing, window cleaning, etc"
+                                    keyboardType="default"
+                                    multiline={true} 
+                                    onFocus={() => console.log('Input Focused')}
+                                    style={{ minHeight: 80, textAlignVertical: 'top' }}
+                                />
+                            </View>
+                        </View>
                     </View>
-                </View>
                 </ScrollView>
             </KeyboardAvoidingView>
             <View style={styles.footerContainer}>

@@ -28,7 +28,7 @@ const HomeAddress = () => {
         setLoading(true);
         setTimeout(() => {
             setLoading(false);
-            navigation.navigate("BookingDetails", { progress: 0.6 });
+            navigation.navigate("BookingDetails", { progress: 0.2 });
         }, 1500);
     };
 
@@ -61,7 +61,7 @@ const HomeAddress = () => {
             />
             <View style={styles.footerContainer}>
                 <ProgressBar 
-                    progress={selectedAddress ? 0.3 : 0.1}
+                    progress={selectedAddress ? 0.1 : 0.05}
                     color="#1B2431" 
                     style={styles.progressBar} 
                 />

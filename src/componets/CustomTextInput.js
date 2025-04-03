@@ -11,6 +11,8 @@ const CustomTextInput = ({
   placeholderTextColor = Colors.PLACEHOLDER_COLOR,
   onFocus,
   editable = true,
+  style,
+  secureTextEntry
 }) => {
   const [isFocused, setIsFocused] = useState(false);
 
@@ -29,7 +31,7 @@ const CustomTextInput = ({
   const hasValue = value.trim().length > 0;
 
   return (
-    <View style={[styles.container, (isFocused || hasValue) && styles.validBackground, isFocused && styles.focusedBorder]}>
+    <View style={[styles.container, (isFocused || hasValue) && styles.validBackground, isFocused && styles.focusedBorder,style]}>
       <TextInput
         style={styles.input}
         value={value}
@@ -44,6 +46,7 @@ const CustomTextInput = ({
         }}
         onBlur={() => setIsFocused(false)}
         editable={editable}
+        secureTextEntry={secureTextEntry} 
       />
     </View>
   );

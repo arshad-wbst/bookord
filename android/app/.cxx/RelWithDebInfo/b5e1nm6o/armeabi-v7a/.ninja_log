@@ -131,3 +131,5 @@
 145678	153812	1742795159817747966	rnscreens_autolinked_build/CMakeFiles/react_codegen_rnscreens.dir/Users/wbst/Documents/Naushad/bookord/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSScreenStackHeaderConfigShadowNode.cpp.o	b69d8929d913aa7c
 153813	154043	1742795159967361642	/Users/wbst/Documents/Naushad/bookord/android/app/build/intermediates/cxx/RelWithDebInfo/b5e1nm6o/obj/armeabi-v7a/libreact_codegen_rnscreens.so	7d9bb0deff4b78d8
 154043	154329	1742795160256652094	/Users/wbst/Documents/Naushad/bookord/android/app/build/intermediates/cxx/RelWithDebInfo/b5e1nm6o/obj/armeabi-v7a/libappmodules.so	6703d4e1121b7bcc
+2	48	0	/Users/wbst/Documents/Naushad/bookord/android/app/.cxx/RelWithDebInfo/b5e1nm6o/armeabi-v7a/CMakeFiles/cmake.verify_globs	7b8fc0b60d97794a
+2	83	0	clean	f01e612f34ff3aa8

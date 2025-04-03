@@ -131,3 +131,5 @@
 119988	126144	1742795290261831794	safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir/Users/wbst/Documents/Naushad/bookord/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/ShadowNodes.cpp.o	9c404ccb6dcd977c
 126144	126264	1742795290366233875	/Users/wbst/Documents/Naushad/bookord/android/app/build/intermediates/cxx/RelWithDebInfo/b5e1nm6o/obj/x86/libreact_codegen_safeareacontext.so	ea56f1add5ae886f
 126264	126534	1742795290561118080	/Users/wbst/Documents/Naushad/bookord/android/app/build/intermediates/cxx/RelWithDebInfo/b5e1nm6o/obj/x86/libappmodules.so	aca21cc6cc8bed08
+1	44	0	/Users/wbst/Documents/Naushad/bookord/android/app/.cxx/RelWithDebInfo/b5e1nm6o/x86/CMakeFiles/cmake.verify_globs	1a650247763345fe
+0	77	0	clean	f01e612f34ff3aa8

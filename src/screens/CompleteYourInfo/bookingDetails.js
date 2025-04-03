@@ -25,7 +25,7 @@ const BookingDetails = ({ route }) => {
     const [selectedSize, setSelectedSize] = useState(null);
     const [selectedHow, setselectedHow] = useState(null)
 
-    const progress = route.params?.progress || 0.5;
+    const progress = route.params?.progress || 0.2;
     const hoursData = [
         { label: "1 Hour", value: "1" },
         { label: "2 Hours", value: "2" },
@@ -68,7 +68,7 @@ const BookingDetails = ({ route }) => {
         setLoading(true);
         setTimeout(() => {
             setLoading(false);
-            navigation.navigate("PeopleAdded", { progress: 1.0 });
+            navigation.navigate("PeopleAdded", { progress: 0.4 });
         }, 1000);
     };
 

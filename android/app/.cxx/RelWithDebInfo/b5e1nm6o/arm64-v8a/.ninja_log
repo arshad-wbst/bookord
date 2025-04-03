@@ -131,3 +131,5 @@
 141281	149485	1742794999767109241	RNVectorIconsSpec_autolinked_build/CMakeFiles/react_codegen_RNVectorIconsSpec.dir/react/renderer/components/RNVectorIconsSpec/RNVectorIconsSpecJSI-generated.cpp.o	371d6b22c8ad4769
 142465	149715	1742794999999241154	RNVectorIconsSpec_autolinked_build/CMakeFiles/react_codegen_RNVectorIconsSpec.dir/react/renderer/components/RNVectorIconsSpec/ShadowNodes.cpp.o	4c70414eb347d94a
 149715	150193	1742795000266405009	/Users/wbst/Documents/Naushad/bookord/android/app/build/intermediates/cxx/RelWithDebInfo/b5e1nm6o/obj/arm64-v8a/libappmodules.so	345bbeed5e716081
+1	26	0	/Users/wbst/Documents/Naushad/bookord/android/app/.cxx/RelWithDebInfo/b5e1nm6o/arm64-v8a/CMakeFiles/cmake.verify_globs	41959d60a347a2ef
+0	58	0	clean	f01e612f34ff3aa8
