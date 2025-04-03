@@ -5,20 +5,22 @@ import { Colors } from "../../styles";
 
 
 const categories = [
-  { id: "1", title: "Plumbing", image: require("../../assets/images/cleaning.png") },
-  { id: "2", title: "Carpentry", image: require("../../assets/images/cleaning.png") },
-  { id: "3", title: "Painting", image: require("../../assets/images/cleaning.png") },
-  { id: "4", title: "Cleaning", image: require("../../assets/images/cleaning.png") },
-  { id: "5", title: "Plumbing", image: require("../../assets/images/cleaning.png") },
+  { id: "1", title: "Plumbing", image: require("../../assets/images/plumber.png") },
+  { id: "2", title: "Carpentry", image: require("../../assets/images/carpenter.jpg") },
+  { id: "3", title: "Painting", image: require("../../assets/images/images.jpeg") },
+  { id: "4", title: "Cleaning", image: require("../../assets/images/cleaner.png") },
+  { id: "5", title: "Plumbing", image: require("../../assets/images/plumbings.jpg") },
 
 ];
 
-const CategoryList = () => {
+const CategoryList = ({onPress}) => {
   return (
     <View style={styles.container}>
        <View style={styles.header}>
        <Text style={styles.title}>Browse all categories</Text>
-              <TouchableOpacity style={{flexDirection:"row",alignItems:"center"}}>
+              <TouchableOpacity
+                     onPress={onPress} 
+               style={{flexDirection:"row",alignItems:"center"}}>
                 <Text style={styles.viewAll}>View all</Text>
                  <Icon name="chevron-right" size={20} color={Colors.BLACK} />
               </TouchableOpacity>
@@ -41,7 +43,7 @@ const CategoryList = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { paddingHorizontal: 15, marginBottom: 25, marginLeft:10},
+  container: { paddingHorizontal: 15, marginBottom: 25, marginLeft:10,marginTop:10},
   title: { fontSize: 18, fontWeight: "bold", marginBottom: 10 },
   categoryItem: { alignItems: "center", marginRight: 25 },
   image: { width: 60, height: 60, borderRadius: 30 },
@@ -55,7 +57,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 15,
+    marginBottom: 20,
+  
   },
 });
 

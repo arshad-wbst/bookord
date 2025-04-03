@@ -23,7 +23,7 @@ const MapScreen = ({ navigation }) => {
   // }
 
   const [region, setRegion] = useState({
-    latitude: 6.6018, // Ikeja, Lagos Example
+    latitude: 6.6018, 
     longitude: 3.3515,
     latitudeDelta: 0.01,
     longitudeDelta: 0.01,
@@ -35,7 +35,6 @@ const MapScreen = ({ navigation }) => {
     const { latitude, longitude } = e.nativeEvent.coordinate;
     setLocation({ latitude, longitude });
 
-    // Here, you can use a reverse geocoding API to fetch the updated address
     setAddress(`Updated Location: ${latitude.toFixed(4)}, ${longitude.toFixed(4)}`);
   };
 
@@ -45,7 +44,6 @@ const MapScreen = ({ navigation }) => {
         setTimeout(() => {
             setLoading(false);
             navigation.navigate('AdditionalAddressScreen', { address: address });
-            // console.log('Password reset link sent to:', email);
         }, 2000);
     }
 };
@@ -59,23 +57,17 @@ const MapScreen = ({ navigation }) => {
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Confirm your home address</Text>
       </View>
-
-      {/* Map View */}
       <MapView
         style={styles.map}
         region={region}
         onRegionChangeComplete={(newRegion) => setRegion(newRegion)}
       />
       <View style={styles.markerFixed}>
-        {/* Marker Icon inside Purple Box */}
         <View style={styles.markerContainer}>
           <Icon name="map-marker-outline" size={22} color={Colors.WHITE} />
         </View>
-
-        {/* Black Line Below the Pin */}
         <View style={styles.markerStick} />
       </View>
-
 
       {/* Address Box */}
       <View style={styles.addressContainer}>
@@ -102,7 +94,6 @@ const MapScreen = ({ navigation }) => {
       {/* <TouchableOpacity style={styles.confirmButton}>
         <Text style={styles.confirmButtonText}>Confirm location</Text>
       </TouchableOpacity> */}
-
     </View>
   );
 

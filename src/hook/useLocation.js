@@ -5,7 +5,7 @@ import Geocoder from "react-native-geocoding";
 import { check, request, PERMISSIONS, RESULTS } from "react-native-permissions";
 
 // Initialize Google Geocoding API (Replace with your API Key)
-Geocoder.init("YOUR_GOOGLE_MAPS_API_KEY");
+Geocoder.init("AIzaSyCT-UvG80YvcbNJHVVEZXMVTULw8fq8688");
 
 const useLocation = () => {
   const [location, setLocation] = useState(null);

@@ -3,10 +3,10 @@ import { View, Text, FlatList, Image, StyleSheet } from "react-native";
 
 // Dummy data for top services
 const topServices = [
-  { name: "Cleaning", image: require("../../assets/images/cleaning.png") },
-  { name: "Plumbing", image: require("../../assets/images/cleaning.png") },
-  { name: "Painting", image: require("../../assets/images/cleaning.png")  },
-  { name: "Babysitting", image: require("../../assets/images/cleaning.png")  },
+  { name: "Cleaning", image: require("../../assets/images/cleaner.png") },
+  { name: "Plumbing", image: require("../../assets/images/plumbings.jpg") },
+  { name: "Painting", image: require("../../assets/images/images.jpeg")  },
+  { name: "Babysitting", image: require("../../assets/images/babysitting.png")  },
 ];
 
 const TopServices = () => {

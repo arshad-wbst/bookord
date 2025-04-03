@@ -63,15 +63,16 @@ const DashboardScreen = ({}) => {
         renderItem={({ item }) => {
           switch (item.key) {
             case "services":
-              return <ServiceList />;
+              return <CategoryList onPress={() => navigation.navigate("ViewAll", { pagename: "Category List" })} />;
             case "categories":
-              return <CategoryList />;
+              return <ServiceList onPress={() => navigation.navigate("ViewAll", { pagename: "Service List" })} />;
             case "handyman":
-              return <HandymanList />;
+              return <HandymanList onPress={() => navigation.navigate("ViewAll", { pagename: "Handyman Services" })} />;
             default:
               return null;
           }
         }}
+        
         contentContainerStyle={styles.listContent}
         showsVerticalScrollIndicator={false} 
       />

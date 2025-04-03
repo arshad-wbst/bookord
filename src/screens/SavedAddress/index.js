@@ -27,9 +27,7 @@ const SavedAddresses = () => {
                     <Icon name="plus-circle-outline" size={20} color="#1B2431" />
                     <Text style={styles.addText}>Add</Text>
                 </TouchableOpacity>
-
             </View>
-
             <FlatList
                 data={addresses}
                 keyExtractor={(item) => item.id.toString()}

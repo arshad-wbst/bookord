@@ -4,8 +4,8 @@ import PrimaryButton from '../../componets/PrimaryButton';
 import { Colors } from '../../styles';
 import SkeletonLoader from '../../componets/SkeletonLoader';
 import styles from './styles';
-import Geolocation from 'react-native-geolocation-service';
-import { check, request, PERMISSIONS, RESULTS } from 'react-native-permissions';
+// import Geolocation from 'react-native-geolocation-service';
+// import { check, request, PERMISSIONS, RESULTS } from 'react-native-permissions';
 
 const Locationpage =({ navigation })=> {
     const [location, setLocation] = useState(null);
@@ -26,35 +26,35 @@ const Locationpage =({ navigation })=> {
     }, [isDisplay]);
 
 
-    const requestLocationPermission = async () => {
-        if (Platform.OS === 'android') {
-            const granted = await PermissionsAndroid.request(
-                PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
-            );
-            return granted === PermissionsAndroid.RESULTS.GRANTED;
-        } else {
-            const result = await request(PERMISSIONS.IOS.LOCATION_WHEN_IN_USE);
-            return result === RESULTS.GRANTED;
-        }
-    };
+    // const requestLocationPermission = async () => {
+    //     if (Platform.OS === 'android') {
+    //         const granted = await PermissionsAndroid.request(
+    //             PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
+    //         );
+    //         return granted === PermissionsAndroid.RESULTS.GRANTED;
+    //     } else {
+    //         const result = await request(PERMISSIONS.IOS.LOCATION_WHEN_IN_USE);
+    //         return result === RESULTS.GRANTED;
+    //     }
+    // };
 
-    const getLocation = async () => {
-        const hasPermission = await requestLocationPermission();
-        if (!hasPermission) {
-            Alert.alert("Permission Denied", "Enable location access to use this feature.");
-            return;
-        }
+    // const getLocation = async () => {
+    //     const hasPermission = await requestLocationPermission();
+    //     if (!hasPermission) {
+    //         Alert.alert("Permission Denied", "Enable location access to use this feature.");
+    //         return;
+    //     }
 
-        Geolocation.getCurrentPosition(
-            (position) => {
-                setLocation(position.coords);
-            },
-            (error) => {
-                console.log(error);
-            },
-            { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
-        );
-    };
+    //     Geolocation.getCurrentPosition(
+    //         (position) => {
+    //             setLocation(position.coords);
+    //         },
+    //         (error) => {
+    //             console.log(error);
+    //         },
+    //         { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
+    //     );
+    // };
 
     return (
         <View style={styles.container}>

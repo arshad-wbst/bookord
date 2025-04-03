@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TouchableOpacity, StyleSheet,Text } from 'react-native';
+import { View, StyleSheet,Text } from 'react-native';
 import CountryPicker from 'react-native-country-picker-modal';
 
 const getFlagEmoji = (countryCode) => {
@@ -11,7 +11,6 @@ const getFlagEmoji = (countryCode) => {
 };
 
 export default function CountryPickerComponent({ onSelect,isPickerVisible,setPickerVisible }) {
-  // const [isPickerVisible, setPickerVisible] = useState(false);
 
   const handleSelectCountry = (country) => {
     let callingCode = country.callingCode && country.callingCode.length > 0 

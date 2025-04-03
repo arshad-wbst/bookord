@@ -4,17 +4,19 @@ import { Colors } from "../../styles";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 const handymanServices = [
-  { id: "1", title: "House Cleaners", price: "NGN5,000/hr", image: require("../../assets/images/cleaning.png") },
-  { id: "2", title: "Electrical Help", price: "NGN3,000/hr", image: require("../../assets/images/cleaning.png") },
+  { id: "1", title: "House Cleaners", price: "NGN5,000/hr", image: require("../../assets/images/cleaners.jpg") },
+  { id: "2", title: "Electrical Help", price: "NGN3,000/hr", image: require("../../assets/images/electrician.png") },
 ];
 
-const HandymanList = () => {
+const HandymanList =({ onPress })=> {
   return (
     <View style={styles.container}>
       {/* Header Row */}
       <View style={styles.header}>
         <Text style={styles.title}>Handyman Services</Text>
-        <TouchableOpacity style={{flexDirection:"row",alignItems:"center"}}>
+        <TouchableOpacity 
+         onPress={onPress} 
+        style={{flexDirection:"row",alignItems:"center"}}>
           <Text style={styles.viewAll}>View all</Text>
            <Icon name="chevron-right" size={20} color={Colors.BLACK} />
         </TouchableOpacity>
@@ -33,8 +35,6 @@ const HandymanList = () => {
             </View>
             <TouchableOpacity style={styles.heartIcon}>
             <Text style={styles.pricetext}>Start @NGN300/hr</Text>
-
-              {/* <Icon name="heart-outline" size={20} color={Colors.RED} /> */}
             </TouchableOpacity>
             <Text style={styles.serviceTitle}>{item.title}</Text>
             <Text style={styles.descText}>{item.title}</Text>
@@ -74,7 +74,6 @@ const styles = StyleSheet.create({
     marginRight: 15,
     borderRadius: 10,
     overflow: "hidden",
-    // backgroundColor: Colors.WHITE,
   },
   image: {
     width: "100%",
